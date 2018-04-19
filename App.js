@@ -85,18 +85,18 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   header: {
-    flex: 2,
+    flex: .1,
     flexDirection: 'row',
     justifyContent: 'center',
   },
   content: {
-    flex: 1,
+    flex: .8,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },
   footer: {
-    flex: 1,
+    flex: .1,
     flexDirection: 'row',
     justifyContent: 'center',
   },
