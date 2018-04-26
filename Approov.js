@@ -1,25 +1,13 @@
 import {NativeModules} from 'react-native';
 
-
-const fetchWithToken = (input, init) => {
+const fetchWithToken = (input, options) => {
     return Approov.fetchApproovToken(input)
         .then(token => {
-            //console.log('token: ' + token);
-            //alert('init: ' + JSON.stringify(init, null, 2), 'Response');
-            var initplus;
-            if (init == null) {
-                initplus = { 'headers' : { 'Approov-Token': token } };
-            } else {
-                initplus = { ...init };
-                if ('headers' in init) {
-                    initplus.headers.append('Approov-Token', token);
-                } else {
-                    initplus.headers = { 'Approov-Token': token };
-                }
-            }
-            //alert('initplus: ' + JSON.stringify(initplus, null, 2), 'Response');
+            let optionsA = (options? {...options, headers:{ ...options.headers}}:{headers: {}});
+            optionsA.headers['Approov-Token'] = token;
+            //alert('optionsA: ' + JSON.stringify(optionsA, null, 2), 'Response');
 
-            return fetch(input, initplus)
+            return fetch(input, optionsA)
                 .then((response) => {
                     if (response.ok) {
                         return response;
