@@ -1,7 +1,7 @@
 import {NativeModules} from 'react-native';
 
 const fetchWithToken = (input, options) => {
-    return Approov.fetchApproovToken(input)
+    return NativeModules.Approov.fetchApproovToken(input)
         .then(token => {
             let optionsA = (options? {...options, headers:{ ...options.headers}}:{headers: {}});
             optionsA.headers['Approov-Token'] = token;
