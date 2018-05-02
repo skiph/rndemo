@@ -5,17 +5,16 @@ This is a simple React Native client demonstrating Approov usage.
 The client is attested by the Approov library, and if registration is successful, 
 a random shape will be displayed when the 'get shape' button is pressed.
 
-For now, the demo will only run on Android. Adding iOS will require some relatively minor
-work to install and integrate the iOS Approov library with React Native.
+For now, the demo runs on Android. The iOS version is on its way.
 
-# Pre-requisites
+# Prerequisites
 
 You will need to download the Approov Demo package at [approov.io](https://approov.io). 
 See the demo download README.md file for more information.
 
 This demo uses the download demo's backend server, the approov.aar library, and the registration tools.
 
-# The Shapes backend server
+# The Shapes Back-end Server
 
 The Shapes demo server is really simple, you can access it at https://demo-server.approovr.io/.
 It has 2 endpoints:
@@ -65,7 +64,7 @@ the React Native Android project in the rndemo/android/approov/ directory
 Next, launch an Android emulator or attach an Android device and,
 from the top-level rndemo directory, run `npm run android`.
 
-This should rebuild the android project and run teh rndemo client on the Android device.
+This should rebuild the android project and run the rndemo client on the Android device.
 
 # Running the RNDemo App
 
@@ -129,4 +128,4 @@ during the fetch call.
 
 # CAUTION
 
-This is an early work in progress.
+This is a simple example for illustartive purposes, and it is not intended for production.
